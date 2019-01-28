@@ -1,3 +1,3 @@
-class CookingMethod < ActiveRecord::Base[5.0]
+class CookingMethod < ActiveRecord::Base
   has_many :dishes
 end

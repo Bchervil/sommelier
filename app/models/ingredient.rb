@@ -1,3 +1,3 @@
-class Ingredient < ActiveRecord::Base[5.0]
+class Ingredient < ActiveRecord::Base
   has_many :dishes
 end

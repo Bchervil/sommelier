@@ -1,4 +1,4 @@
-class Wine < ActiveRecord::Base[5.0]
+class Wine < ActiveRecord::Base
   BODY_TYPES = {
     "Light-bodied white" => 1,
     "Medium-bodied white" => 2,

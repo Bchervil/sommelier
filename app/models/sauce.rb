@@ -1,3 +1,3 @@
-class Sauce < ActiveRecord::Base[5.0]
+class Sauce < ActiveRecord::Base
   has_many :dishes
 end
