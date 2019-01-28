@@ -1,7 +1,7 @@
 # Change these
 server 'herokuapp.com', roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'https://github.com/bchervil/wine-project.git'
+set :repo_url,        'https://github.com/bchervil/sommelier.git'
 set :application,     'pocket-sommelier'
 set :user,            'Beerscheba'
 set :puma_threads,    [4, 16]
