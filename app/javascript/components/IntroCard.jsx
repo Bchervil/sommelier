@@ -10,7 +10,7 @@ import Card from './Card'
 const IntroCard = ({onNextClick}) => {
   return (
     <Card
-      text={"Pair My Dish"}
+      text={"Pocket Sommelier"}
       buttonText={"Get Started"}
       onNextClick={onNextClick}
       shouldScroll={false}

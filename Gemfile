@@ -60,6 +60,7 @@ gem 'puma'
 
 
 group :development, :test do
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'capybara', '>= 2.15', '< 4.0'
