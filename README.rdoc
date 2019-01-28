@@ -1,0 +1,23 @@
+== README
+
+Pair My Dish is a Ruby on Rails app that allows a user to answer a series of questions about a dish they are cooking and receive a customized wine pairing suggestion.
+
+* Ruby version 2.3.0
+
+* Rails version 4.2.5.1
+
+* MySql
+
+* Known bugs around sign up/sign in. User can only sign up via remote form. If a user tries to sign in via remote form, wine pairing will be lost. 
+
+The wine pairing method can be found in app/models/wine.rb
+
+The wine pairing method works like this:
+
+Each wine has a range for body, alcohol, tannin, and acid. It also has associated aromas.
+
+Each ingredient and cooking method has a range for body. Each sauce has a range for alcohol, tannin, and acid. Each side has associated aromas. 
+
+The wine pairing method performs a series of hierarchical queries to the database, each time returning an array with fewer and fewer selections. If upon the final selection no wine is returned, the method returns the previous query.  
+
+Future versions will take into account the spiciness and sweetness of dishes and whether a wine is sweet or sparkling. 

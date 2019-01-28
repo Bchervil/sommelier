@@ -1,0 +1,92 @@
+
+<%=link_to("View wines", wines_path, class: "btn btn-primary btn-sm") %>
+
+<p><%= form_for @wine do |f| %></p><br>
+<%= render partial: 'shared/error_messages', locals: {thing: @wine} %>
+  
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control", placeholder: "Chardonnay" %>
+  </div>
+
+  <h4>Body</h4>
+  
+  <% Wine::BODY_TYPES.each do |body_type, value| %>
+    <div class="radio">
+      <%= f.label :body, value: value do %>
+        <%= f.radio_button :body, value %>
+        <%= body_type %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <h4>Alcohol</h4>
+
+  <% Wine::ALCOHOL_LEVELS.each do |alcohol_level, value| %>
+    <div class="radio">
+      <%= f.label :alcohol, value: value do %>
+        <%= f.radio_button :alcohol, value %>
+        <%= alcohol_level %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <h4>Tannin</h4>
+
+  <% Wine::TANNIN_LEVELS.each do |tannin_level, value| %>
+    <div class="radio">
+      <%= f.label :tannin, value: value do %>
+        <%= f.radio_button :tannin, value %>
+        <%= tannin_level %>
+      <% end %>
+    </div>
+  <% end %>
+  
+  <h4>Acid</h4>
+
+  <% Wine::ACID_LEVELS.each do |acid_level, value| %>
+    <div class="radio">
+      <%= f.label :acid, value: value do %>
+        <%= f.radio_button :acid, value %>
+        <%= acid_level %>
+      <% end %>
+    </div>
+  <% end %>
+
+
+  <h4>Sweetness</h4>
+
+  <% Wine::SWEETNESS_LEVELS.each do |sweetness_level, value| %>
+    <div class="radio">
+      <%= f.label :sweetness, value: value do %>
+        <%= f.radio_button :sweetness, value %>
+        <%= sweetness_level %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <h4>Sparkling</h4>
+  <div class="checkbox">
+    <%= f.label :sparkling do %>
+      <%= f.check_box :sparkling %>
+      This is a sparkling wine
+    <% end %>
+  </div>
+  
+  
+
+  <h4>Aromas <small>(Check all that apply)</small></h4> 
+
+  
+  <%= f.collection_check_boxes(:aroma_ids, Aroma.order(:name), :id, :name) do |aroma| %>
+    <div class="checkbox">
+      <%= aroma.label { aroma.check_box + aroma.text.titleize  } %>
+    </div>
+  <% end %>
+  
+
+
+
+
+  <%= f.submit 'Save', class: "btn btn-primary btn-sm" %>
+<% end %>
