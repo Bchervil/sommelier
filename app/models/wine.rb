@@ -1,17 +1,17 @@
-class Wine < ActiveRecord::Base
-  BODY_TYPES = { 
-    "Light-bodied white" => 1, 
-    "Medium-bodied white" => 2, 
-    "Full-bodied white" => 3, 
-    "Rose" => 4, 
-    "Light-bodied red" => 5, 
-    "Medium-bodied red" => 6, 
-    "Full-bodied red" => 7 
+class Wine < ActiveRecord::Base[5.0]
+  BODY_TYPES = {
+    "Light-bodied white" => 1,
+    "Medium-bodied white" => 2,
+    "Full-bodied white" => 3,
+    "Rose" => 4,
+    "Light-bodied red" => 5,
+    "Medium-bodied red" => 6,
+    "Full-bodied red" => 7
   }
 
   ALCOHOL_LEVELS = {
     "Low-alcohol (under 12.5%)" => 1,
-    "Medium-alcohol (12.5% - 13.5%)" => 2, 
+    "Medium-alcohol (12.5% - 13.5%)" => 2,
     "High-alcohol (13.5% - 15%)" => 3
   }
 
@@ -36,16 +36,16 @@ class Wine < ActiveRecord::Base
 
   has_and_belongs_to_many :aromas
   validates :name, presence: true
-  validates :body, presence: true  
+  validates :body, presence: true
   validates :alcohol, presence: true
-  validates :tannin, presence: true 
+  validates :tannin, presence: true
   validates :acid, presence: true
-  validates :sweetness, presence: true   
+  validates :sweetness, presence: true
 
   def self.pair(dish)
     ingredient = dish.ingredient
     sauce = dish.sauce
-    
+
     if dish.cooking_method.dry
       wine_selection = Wine.where(
         body: (ingredient.body_min + 1 ..ingredient.body_max)

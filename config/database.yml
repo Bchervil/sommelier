@@ -19,8 +19,6 @@ default: &default
   adapter: sqlite3
   encoding: utf8
   pool: 5
-  username: root
-  password:
   host: localhost
 
 development:
