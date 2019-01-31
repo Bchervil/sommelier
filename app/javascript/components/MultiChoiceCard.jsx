@@ -6,7 +6,7 @@ import Card from './Card'
 
 class MultiChoiceCard extends React.Component {
   static defaultProps = {
-    buttonText: "Pair My Dish"
+    buttonText: "Dish pairing"
   }
   state = {
     selectedChoices: []
@@ -35,16 +35,16 @@ class MultiChoiceCard extends React.Component {
 
       >
         {this.props.choices.map(({id, name}) =>
-          <label 
+          <label
             key = {id}
             className={classNames("radio-style", {
               "active": this.state.selectedChoices.some(value => value.id === id)
-            })} 
+            })}
           >
-            <input 
+            <input
               type="checkbox"
-              value={id} name={`question${this.props.step}`} 
-              className="ingredient-question-button" 
+              value={id} name={`question${this.props.step}`}
+              className="ingredient-question-button"
               onChange={(event) => this.selectChoices(id, name, event)}
             />
             {name}
@@ -55,6 +55,4 @@ class MultiChoiceCard extends React.Component {
   }
 }
 
-export default MultiChoiceCard 
-
-
+export default MultiChoiceCard

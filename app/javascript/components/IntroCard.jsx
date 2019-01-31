@@ -17,9 +17,9 @@ const IntroCard = ({onNextClick}) => {
       blurb={" Whether you are out with your friends, on a date or at home.
         we got you covered"}
     >
-      // <img src={WhiteBottle} className="wine-bottle"/>
-      // <img src={PinkBottle} className="wine-bottle"/>
-      // <img src={RedBottle} className="wine-bottle"/>
+      <img src={WhiteBottle} className="wine-bottle"/>
+      <img src={PinkBottle} className="wine-bottle"/>
+      <img src={RedBottle} className="wine-bottle"/>
     </Card>
   )
 }

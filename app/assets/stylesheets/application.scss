@@ -121,7 +121,7 @@ body {
 .list-inline {
   display: inline-block;
   padding: 20px;
-  margin: 2%;
+  margin: 4%;
   height: 400px;
   width: 200px;
 
@@ -145,6 +145,7 @@ body {
 }
 .red {
   background: image-url('wine_bottle_red.jpg') no-repeat center;
+
   background-size: contain;
 }
 
@@ -176,7 +177,7 @@ body {
   background-color: #FFF;
   padding: 10px 70px;
   border-radius: 10px;
-  border: 1px solid #979797;
+  border: 1px solid #4D002B;
   &:hover{
     background: rgba(216,216,216,0.31);
   }
@@ -194,8 +195,8 @@ body {
 
 .box {
   border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  background-color: #F7F7F7;
+  box-shadow: 0 2px 4px 0 black;
   display: flex;
   flex-direction: column;
   align-items: center;
