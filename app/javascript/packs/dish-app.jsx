@@ -23,7 +23,7 @@ const enhancer = compose(
 let store = createStore(reducer, {
   questions: [
     {
-      text: "What are you cooking?",
+      text: "What are you cooking or eating?",
       choices: ingredients,
       currentSelections: [],
       slug: "main-ingredient",
@@ -32,19 +32,19 @@ let store = createStore(reducer, {
       text: "How are you cooking it?",
       choices: cooking_methods,
       currentSelections: [],
-      slug: "cooking-method", 
+      slug: "cooking-method",
     },
     {
       text: "What kind of sauce are you adding?",
       choices: sauces,
-      currentSelections: [], 
+      currentSelections: [],
       slug: "sauce",
     },
     {
       text: "Does your dish have any of these flavors?",
       choices: sides,
       currentSelections: [],
-      slug: "flavors" 
+      slug: "flavors"
     },
   ],
   wineList: []//temp fix until questions can be moved into reducer
@@ -54,7 +54,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <ScrollToTop>
-        <Route 
+        <Route
           path="/"
           component={App}
         />
@@ -63,5 +63,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('dish-app')
 );
-
-

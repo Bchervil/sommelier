@@ -14,7 +14,8 @@ const IntroCard = ({onNextClick}) => {
       buttonText={"Get Started"}
       onNextClick={onNextClick}
       shouldScroll={false}
-      blurb={"We choose the perfect wine for your dish using pairing techniques from top sommeliers."}
+      blurb={" Whether you are out with your friends, on a date or at home.
+        we got you covered"}
     >
       <img src={WhiteBottle} className="wine-bottle"/>
       <img src={PinkBottle} className="wine-bottle"/>

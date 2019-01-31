@@ -4,12 +4,12 @@
 @import url(http://fonts.googleapis.com/css?family=Courgette:400,600,700);
 
 html {
-  background: image-url('food-drink-kitchen-cutting-board.jpg');
+  background: image-url('bg1.jpg');
   background-repeat: repeat;
 }
 
 a:hover {
-  color: #FF4040;
+  color: #4D002B;
   text-decoration: none;
 }
 
@@ -18,7 +18,7 @@ a:focus{
 }
 
 .link {
-  color: #009999;
+  color: #4D002B;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -28,7 +28,7 @@ a:focus{
 #single-wine-list {
   list-style-type: none;
   font-family: 'Courgette';
-  color: #FF4040;
+  color: #4D002B;
   font-size: 25px;
   padding-left: 0px;
 
@@ -60,7 +60,7 @@ body {
 }
 
 .radio-style {
-  background-color: #009999;
+  background-color: #4D002B;
   color: rgba(255, 255, 255, 1);
   font-size: 18px;
   letter-spacing: 1px;
@@ -104,18 +104,18 @@ body {
 }
 
 .radio-style:hover {
-  background: #86B32D;
+  background: #4D002B;
   cursor: pointer;
   cursor: hand;
 }
 
 .active:hover {
-  background-color: #679B00;
+  background-color: #4D002B;
 
 }
 
 .active {
-  background-color: #679B00;
+  background-color: #4D002B;
 }
 
 .list-inline {
@@ -129,7 +129,7 @@ body {
     position: relative;
     top: 190px;
     font-family: 'Courgette';
-    color: #FF4040;
+    color: #4D002B;
     font-size: 20px;
   }
 }
@@ -158,11 +158,11 @@ body {
 
 #show-dish-name {
   font-family: 'Courgette';
-  color: #FF4040;
+  color: #4D002B;
 }
 
 #save-dish {
-  color: #FF4040;
+  color: #4D002B;
   font-family: 'Courgette';
   font-size: 25px;
   background-color: #FFF;
@@ -170,7 +170,7 @@ body {
 }
 
 #side-question-button, .next-button {
-  color: #FF4040;
+  color: #4D002B;
   font-family: 'Courgette';
   font-size: 30px;
   background-color: #FFF;
@@ -207,7 +207,7 @@ body {
 }
 
 .brand-title {
-  color: #FF4040;
+  color: #4D002B;
   font-family: 'Courgette';
   font-size: 50px;
 }
@@ -222,7 +222,7 @@ div.hidden {
 
 .random-wine {
   font-family: 'Courgette';
-  color: #FF4040;
+  color: #4D002B;
   font-size: 25px;
 }
 
@@ -239,7 +239,7 @@ div.hidden {
 }
 
 #view-all-pairings {
-  color: black;
+  color: #4D002B;
   font-family: 'Montserrat';
   border-color: #708090;
   margin: 10px 0 20px;
@@ -266,24 +266,24 @@ div.hidden {
 }
 
 .dish-title {
-  color: #FF4040;
+  color: #4D002B;
   font-family: 'Courgette';
 }
 
 .error-messages h2 {
   font-size: larger;
-  color: red;
+  color: #4D002B;
 }
 
 .error-messages li {
-  color: red;
+  color: #4D002B;
 }
 
 .question-step {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: #FF4040;
+  background-color: #4D002B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,7 +338,7 @@ nav {
     display: none;
   }
   h2 {
-    color: #FF4040;
+    color: #4D002B;
     font-family: 'Courgette';
     font-size: 50px;
   }
@@ -388,7 +388,7 @@ nav {
   z-index: 5;
   background-color: #fff;
   padding: 2rem;
-  color: #FF4040;
+  color: #4D002B;
   font-family: 'Courgette';
   font-size: 64px;
   border: 1px solid #4A4A4A;
@@ -499,4 +499,103 @@ nav {
   .card-list {
     padding-bottom: 0;
   }
+}
+
+
+
+
+.loader {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+
+.circle {
+	width: 100px;
+  height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: #ffffff;
+	z-index: -1;
+}
+
+.wine {
+  width: 32px;
+  height: 40px;
+	top: 54px;
+	left: 34px;
+  background: #4D002B;
+  position: absolute;
+  -webkit-animation-name: wine;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s;  /* Safari 4.0 - 8.0 */
+	-webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+  -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: wine;
+  animation-duration: 5s;
+	animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-fill-mode: initial;
+	animation-iteration-count: infinite;
+	z-index: -1;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes wine {
+    from {top: 54px;}
+    to {top: 24px;}
+}
+
+@keyframes wine {
+    from {top: 54px;}
+    to {top: 24px;}
+}
+
+.depth {
+	width: 26px;
+	height: 4px;
+	top: 52px;
+	left: 37px;
+	border-radius: 50%;
+  background: #a22136;
+  position: absolute;
+  -webkit-animation-name: depth;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s;  /* Safari 4.0 - 8.0 */
+	-webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+  -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: depth;
+  animation-duration: 5s;
+	animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-fill-mode: initial;
+	animation-iteration-count: infinite;
+	z-index: -1;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes depth {
+    from {top: 52px;}
+    to {top: 22px;}
+}
+
+@keyframes depth {
+	from {top: 52px;}
+    to {top: 22px;}
+}
+
+/* SVG Styles */
+.st0 {
+	opacity:0.325;
+	fill:#FFFFFF;
+}
+
+.st1 {
+	fill:#FFFFFF;
+}
+
+.st2 {
+	fill:#E3ECFC;
 }
