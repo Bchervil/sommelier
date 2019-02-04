@@ -32,7 +32,7 @@ gem 'pry'
 
 gem 'listen'
 
-gem 'webpacker'
+gem 'webpacker', '~> 3.5', '>= 3.5.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
