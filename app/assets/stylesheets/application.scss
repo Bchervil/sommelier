@@ -5,7 +5,8 @@
 
 html {
   background: image-url('bg1.jpg');
-  background-repeat: repeat;
+  background-size: cover no-repeat;
+  
 }
 
 a:hover {
@@ -18,7 +19,7 @@ a:focus{
 }
 
 .link {
-  color: #4D002B;
+  color: #019899;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -500,103 +501,4 @@ nav {
   .card-list {
     padding-bottom: 0;
   }
-}
-
-
-
-
-.loader {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-}
-
-.circle {
-	width: 100px;
-  height: 100px;
-	border-radius: 50%;
-	position: absolute;
-	background-color: #ffffff;
-	z-index: -1;
-}
-
-.wine {
-  width: 32px;
-  height: 40px;
-	top: 54px;
-	left: 34px;
-  background: #4D002B;
-  position: absolute;
-  -webkit-animation-name: wine;  /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s;  /* Safari 4.0 - 8.0 */
-	-webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
-  -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
-  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-  animation-name: wine;
-  animation-duration: 5s;
-	animation-timing-function: ease;
-  animation-delay: 1s;
-  animation-fill-mode: initial;
-	animation-iteration-count: infinite;
-	z-index: -1;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes wine {
-    from {top: 54px;}
-    to {top: 24px;}
-}
-
-@keyframes wine {
-    from {top: 54px;}
-    to {top: 24px;}
-}
-
-.depth {
-	width: 26px;
-	height: 4px;
-	top: 52px;
-	left: 37px;
-	border-radius: 50%;
-  background: #a22136;
-  position: absolute;
-  -webkit-animation-name: depth;  /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s;  /* Safari 4.0 - 8.0 */
-	-webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
-  -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-fill-mode: initial; /* Safari 4.0 - 8.0 */
-  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-  animation-name: depth;
-  animation-duration: 5s;
-	animation-timing-function: ease;
-  animation-delay: 1s;
-  animation-fill-mode: initial;
-	animation-iteration-count: infinite;
-	z-index: -1;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes depth {
-    from {top: 52px;}
-    to {top: 22px;}
-}
-
-@keyframes depth {
-	from {top: 52px;}
-    to {top: 22px;}
-}
-
-/* SVG Styles */
-.st0 {
-	opacity:0.325;
-	fill:#FFFFFF;
-}
-
-.st1 {
-	fill:#FFFFFF;
-}
-
-.st2 {
-	fill:#E3ECFC;
 }
