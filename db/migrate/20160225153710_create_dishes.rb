@@ -1,4 +1,4 @@
-class CreateDishes < ActiveRecord::Migration
+class CreateDishes < ActiveRecord::Migration[5.2]
   def change
     create_table :dishes do |t|
       t.belongs_to :ingredient, index: true
