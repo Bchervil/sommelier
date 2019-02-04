@@ -1,6 +1,8 @@
+
 {
   "root": "build/",
   "routes": {
-    "/**": "dishes#new"
-  }
+    "/**": "index.html"
+  },
+  "https_only": true
 }
